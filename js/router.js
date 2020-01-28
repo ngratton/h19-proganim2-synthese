@@ -10,8 +10,20 @@ import victoire from './components/victoire.js'
  */
 export default new VueRouter({
     routes: [
-        { path: '/', component: splash },
-        { path: '/jeu', component: jeu },
-        { path: '/victoire/:g', name: victoire, component: victoire }
+        { 
+            path: '/',
+            component: splash,
+            name: 'splash'
+        },
+        {
+            path: '/jeu',
+            component: jeu,
+            name: 'jeu'
+        },
+        { 
+            path: '/victoire/:g',
+            component: victoire,
+            name: 'victoire'
+        }
     ]
 })
