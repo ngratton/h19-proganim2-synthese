@@ -1,0 +1,30 @@
+<div id="victoire">
+    <div v-if="$route.params.g !== 'nul'">
+        <div class="victoire--gagnant" :class="{ xxx: $route.params.g === 'X', ooo: $route.params.g === 'O' }">
+            <p>
+                Les <span>{{ $route.params.g }}</span> sont gagnants.
+            </p>
+        </div>
+            <p>
+                Bravo.
+            </p>
+    </div v-if="$route.params.g !== 'nul'">
+
+    <div v-if="$route.params.g === 'nul'">
+        <div class="victoire--gagnant" :class="{ nul: $route.params.g === 'nul' }">
+            <p>
+                :(
+            </p>
+            <p>
+                Match <span>{{ $route.params.g }}</span>.
+            </p>
+        </div>
+            <p>
+                "<em>C'est ultra-nul</em>", comme dirait mon garçon de 3 ans.
+            </p>
+    </div>
+
+    <div class="victoire--lienretour">
+        <router-link to="/jeu">Recommencer</router-link>
+    </div>
+</div>

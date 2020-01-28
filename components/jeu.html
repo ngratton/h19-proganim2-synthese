@@ -1,0 +1,21 @@
+<div id="jeu">
+    <div id="jeu--planche">
+            <case 
+                v-for="(carre, index) in suite"
+                :key="index"
+                @casejouee="updateJoueurs(index, joueurActuel)"
+                :class="{ ooo: suite[index] === 'O',  xxx: suite[index] === 'X', inactive: suite[index] !== '' }"
+                transition="zoom"
+            >
+                {{ suite[index] }}
+            </case>
+    </div>
+    <div class="joueur-actuel">
+        Au tour des <span>{{ joueurActuel }}</span> de jouer.
+    </div>
+    <div class="reset">
+        <button @click="reset">
+            Recommencer
+        </button>
+    </div>
+</div>

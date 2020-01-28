@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ProgAnim2 | Nicholas Gratton (0270256) | Synthèse</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!--JavaScript + VueJS-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js" defer></script>
+    <script src="js/app.js" type="module" defer></script>
+</head>
+<body>
+    <div class="conteneur">
+        <header>
+            <h1>
+                Tic Tac Toe
+            </h1>
+            <span>
+                Programmation d'animations pour le web 2
+            </span>
+            <span class="nom">
+                Nicholas Gratton (0270256)
+            </span>
+        </header>
+        <main>
+            <div id="app">
+                <transition name="fade">
+                    <router-view>
+                        <!-- Application VueJS | Tic-tac-toe -->
+                    </router-view>
+                </transition>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
